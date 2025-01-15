@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="mine.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <h1><p></p><button>Refresh</button></h1>
+
+    <div id="both">
+        <div id="player1">
+            <input type="text" placeholder="player1">
+            <img id="img1" class="dice" src="./images/dice1.png">
+        </div>
+        <div id="player2">
+            <input type="text" placeholder="player2">
+            <img id="img2" class="dice" src="./images/dice1.png">
+        </div>
+    </div>
+
+    <script>
+        var button = document.querySelector("button");
+        var image1 = document.getElementById("img1");
+        var image2 = document.getElementById("img2");
+        
+        
+
+        button.addEventListener('click', function() {
+            var n , x ;
+            var name2 , name1 ;
+            n= Math.ceil(Math.random()* 6 );
+            x= Math.ceil(Math.random()* 6);
+
+            if (document.querySelector("#player2 input").value === '') {
+                name2 = document.querySelector("#player2 input ").placeholder ;
+            }
+            else {
+                name2 = document.querySelector("#player2 input").value ; 
+            }
+
+            if (document.querySelector("#player1 input").value === '') {
+                name1 = document.querySelector("#player1 input ").placeholder ;
+            }
+            else {
+                name1 = document.querySelector("#player1 input").value ; 
+            }
+
+            if(x>n){
+                document.querySelector("h1 p").innerHTML = ( name2 + " won 🚩") ;
+            }
+
+            else if (x<n){
+                document.querySelector("h1 p").innerHTML = ( name1 +" won 🚩") ;
+            }
+
+            else if(x===n){
+                document.querySelector("h1 p").innerHTML = "tie, try again !" ;
+            }
+
+            switch (n){
+                case 1 :
+                    image1.src = "./images/dice1.png" ;
+                    break;
+
+                case 2 :
+                    image1.src = "./images/dice2.png" ;
+                    break;
+
+                case 3 :
+                    image1.src = "./images/dice3.png" ;
+                    break;
+                    
+                case 4 :
+                    image1.src = "./images/dice4.png" ;
+                    break;
+                    
+                case 5 :
+                    image1.src = "./images/dice5.png" ;
+                    break;
+
+                case 6 :
+                    image1.src = "./images/dice6.png" ;   
+                    break; 
+            }
+
+            switch (x){
+                case 1 :
+                    image2.src = "./images/dice1.png" ;
+                    break;
+
+                case 2 :
+                    image2.src = "./images/dice2.png" ;
+                    break;
+
+                case 3 :
+                    image2.src = "./images/dice3.png" ;
+                    break;
+                    
+                case 4 :
+                    image2.src = "./images/dice4.png" ;
+                    break;
+                    
+                case 5 :
+                    image2.src = "./images/dice5.png" ;
+                    break;
+
+                case 6 :
+                    image2.src = "./images/dice6.png" ;    
+                    break;
+            }
+
+        })
+    </script>
+</body>
+</html>
