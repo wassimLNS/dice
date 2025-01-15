@@ -61,60 +61,12 @@
             }
 
             else if(x===n){
-                document.querySelector("h1 p").innerHTML = "tie, try again !" ;
+                document.querySelector("h1 p").innerHTML = "Draw!, try again" ;
             }
 
-            switch (n){
-                case 1 :
-                    image1.src = "./images/dice1.png" ;
-                    break;
+            image1.src = "./images/dice" + n +".png" ;
 
-                case 2 :
-                    image1.src = "./images/dice2.png" ;
-                    break;
-
-                case 3 :
-                    image1.src = "./images/dice3.png" ;
-                    break;
-                    
-                case 4 :
-                    image1.src = "./images/dice4.png" ;
-                    break;
-                    
-                case 5 :
-                    image1.src = "./images/dice5.png" ;
-                    break;
-
-                case 6 :
-                    image1.src = "./images/dice6.png" ;   
-                    break; 
-            }
-
-            switch (x){
-                case 1 :
-                    image2.src = "./images/dice1.png" ;
-                    break;
-
-                case 2 :
-                    image2.src = "./images/dice2.png" ;
-                    break;
-
-                case 3 :
-                    image2.src = "./images/dice3.png" ;
-                    break;
-                    
-                case 4 :
-                    image2.src = "./images/dice4.png" ;
-                    break;
-                    
-                case 5 :
-                    image2.src = "./images/dice5.png" ;
-                    break;
-
-                case 6 :
-                    image2.src = "./images/dice6.png" ;    
-                    break;
-            }
+            image1.src = "./images/dice" + x +".png" ;
 
         })
     </script>
